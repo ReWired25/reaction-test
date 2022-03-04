@@ -5,3 +5,47 @@
 }
 
 /* header */
+
+/* main */
+
+.start-button {
+    display: inline;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: azure;
+    margin: 20px;
+    padding: 5px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: #d3e0e0;
+}
+
+.start-button:active {
+    background-color: white;
+}
+
+.central-button {
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.central-button.active {
+    background-color: red;
+}
+
+.central-button:focus {
+    outline-color: aqua;
+}
+
+.result {
+    margin: 20px;
+}
