@@ -88,7 +88,6 @@ h1 {
 }
 
 .username-head {
-    margin-top: 10px;
     text-align: center;
     font-size: 20px;
 }
@@ -106,6 +105,18 @@ h1 {
 .username-input:focus {
     outline: 2px solid #3178c6;
     box-shadow: 0px 0px 5px #3178c6;
+}
+
+.current-name {
+    margin: 15px auto 0px auto;
+    width: 180px;
+    padding: 5px 10px;
+    overflow: hidden;
+    font-size: 18px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-left: 2px solid #3178c6;
+    border-right: 2px solid #3178c6;
 }
 
 .results-chart {

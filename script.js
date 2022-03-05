@@ -1,6 +1,7 @@
 const startButton = document.querySelector('.start-button');
 const centralButton = document.querySelector('.central-button');
 const result = document.querySelector('.result');
+const currentName = document.querySelector('.current-name');
 
 const usernameInput = document.querySelector('.username-input');
 const cellHead = document.querySelectorAll('.cell-head');
@@ -16,6 +17,8 @@ let resultArr = [];
 usernameInput.addEventListener('keyup', (item) => {
     if (item.keyCode === 13) {
         username = usernameInput.value;
+        currentName.innerHTML = `Current name: ${username}`;
+        usernameInput.value = '';
     }
 })
 
