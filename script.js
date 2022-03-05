@@ -2,9 +2,29 @@ const startButton = document.querySelector('.start-button');
 const centralButton = document.querySelector('.central-button');
 const result = document.querySelector('.result');
 
+const usernameInput = document.querySelector('.username-input');
+const cellHead = document.querySelectorAll('.cell-head');
+const cellResult = document.querySelectorAll('.cell-result');
+
 let firstTime;
 let secondTime;
 let count = 0;
+let username = '';
+let resultArr = [];
+
+usernameInput.addEventListener('keyup', (item) => {
+    if (item.keyCode === 13) {
+        username = usernameInput.value;
+    }
+})
+
+function results() {
+    resultArr.push(`: ${finalTime}ms`);
+
+    if (resultArr.length > 5) {
+        resultArr.shift();
+    }
+}
 
 startButton.addEventListener('click', () => {
     if (count === 0) {
@@ -45,4 +65,5 @@ function resultTime(firstTime, secondTime) {
     let finalTime = secondTime.getTime() - firstTime.getTime();
 
     result.innerHTML = `Result : ${finalTime}ms`;
+    results();
 }
