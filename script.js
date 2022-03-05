@@ -8,6 +8,7 @@ const cellResult = document.querySelectorAll('.cell-result');
 
 let firstTime;
 let secondTime;
+let finalTime;
 let count = 0;
 let username = '';
 let resultArr = [];
@@ -19,10 +20,16 @@ usernameInput.addEventListener('keyup', (item) => {
 })
 
 function results() {
-    resultArr.push(`: ${finalTime}ms`);
+    username === '' ? resultArr.push([`Anon`,`: ${finalTime}ms`]) :
+    resultArr.push([username,`: ${finalTime}ms`]);
 
     if (resultArr.length > 5) {
         resultArr.shift();
+    }
+
+    for (let i in resultArr) {
+        cellHead[i].innerHTML = resultArr[i][0];
+        cellResult[i].innerHTML = resultArr[i][1];
     }
 }
 
@@ -62,7 +69,7 @@ centralButton.addEventListener('click', () => {
 })
 
 function resultTime(firstTime, secondTime) {
-    let finalTime = secondTime.getTime() - firstTime.getTime();
+    finalTime = secondTime.getTime() - firstTime.getTime();
 
     result.innerHTML = `Result : ${finalTime}ms`;
     results();
