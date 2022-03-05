@@ -23,8 +23,8 @@ usernameInput.addEventListener('keyup', (item) => {
 })
 
 function results() {
-    username === '' ? resultArr.push([`Anon`,`: ${finalTime}ms`]) :
-    resultArr.push([username,`: ${finalTime}ms`]);
+    username === '' ? resultArr.push([`Anon`,`: ${finalTime}`]) :
+    resultArr.push([username,`: ${finalTime}`]);
 
     if (resultArr.length > 5) {
         resultArr.shift();
@@ -74,6 +74,8 @@ centralButton.addEventListener('click', () => {
 function resultTime(firstTime, secondTime) {
     finalTime = secondTime.getTime() - firstTime.getTime();
 
-    result.innerHTML = `Result : ${finalTime}ms`;
+    finalTime > 1000 ? finalTime = 'over 1 sec' : finalTime += 'ms';
+
+    result.innerHTML = `Result : ${finalTime}`;
     results();
 }
