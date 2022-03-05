@@ -83,16 +83,16 @@ h1 {
     letter-spacing: 3px;
     border-radius: 50%;
     color: white;
-    background-color: blue;
+    background-color: #0059be;
     cursor: pointer;
 }
 
 .central-button.active {
-    background-color: red;
+    background-color: #0ecb81;
 }
 
 .central-button:focus {
-    outline-color: aqua;
+    outline-color: #0ecb81;
 }
 
 /* results */
@@ -157,6 +157,7 @@ h1 {
     font-size: 20px;
     padding: 10px 15px;
     border: 1px solid #cacaca;
+    background-color: #f5f5f5;
     border-radius: 5px;
 }
 
