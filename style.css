@@ -4,12 +4,25 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Marcellus';
+    src: url(assets/Marcellus-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Signika';
+    src: url(assets/Signika-Light.ttf);
+}
+
 /* header */
 
 h1 {
     text-align: center;
     padding: 20px;
     font-size: 55px;
+    font-family: 'Marcellus';
+    text-transform: uppercase;
+    letter-spacing: 2px;
     background-color: #3178c6;
     color: white;
 }
@@ -27,6 +40,8 @@ h1 {
 .main-text {
     padding: 20px;
     font-size: 20px;
+    font-family: 'Signika';
+    line-height: 1.5;
     text-align: center;
 }
 
@@ -38,6 +53,9 @@ h1 {
     margin: 25px auto;
     padding: 10px;
     font-size: 25px;
+    font-family: 'Signika';
+    text-transform: uppercase;
+    letter-spacing: 1px;
     text-align: center;
     border: 2px solid #cacaca;
     border-radius: 3px;
@@ -59,7 +77,10 @@ h1 {
     margin: 25px auto;
     width: 200px;
     height: 200px;
-    font-size: 30px;
+    font-size: 35px;
+    font-family: 'Marcellus';
+    text-transform: uppercase;
+    letter-spacing: 3px;
     border-radius: 50%;
     color: white;
     background-color: blue;
@@ -81,6 +102,7 @@ h1 {
     width: 200px;
     padding: 10px 20px;
     font-size: 25px;
+    font-family: 'Signika';
     text-align: center;
     background-color: #f5f5f5;
     border-left: 2px solid #3178c6;
@@ -88,8 +110,9 @@ h1 {
 }
 
 .username-head {
-    text-align: center;
     font-size: 20px;
+    font-family: 'Signika';
+    text-align: center;
 }
 
 .username-input {
@@ -113,6 +136,7 @@ h1 {
     padding: 5px 10px;
     overflow: hidden;
     font-size: 18px;
+    font-family: 'Signika';
     text-align: center;
     background-color: #f5f5f5;
     border-left: 2px solid #3178c6;
@@ -139,6 +163,7 @@ h1 {
 .cell-head {
     width: 150px;
     overflow: hidden;
+    font-family: 'Signika';
 }
 
 /* footer */
@@ -151,6 +176,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-family: 'Signika';
     background-color: #3178c6;
 }
 
